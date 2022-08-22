@@ -1,0 +1,23 @@
+.drawingArea{
+    display:grid;
+    height: 960px;
+    width: 960px;
+    border: 2px solid;
+    border-color: black;
+}
+
+.gridElement{
+    flex:1;
+}
+
+.gridElement:hover{
+    background-color: black;
+}
+
+.colour{
+    background-color: red;
+}
+
+button{
+    background-color: rgb(166, 166, 206);
+}
