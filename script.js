@@ -25,9 +25,11 @@ function reloadGrid(){
     gridSizeBtn.addEventListener('click', ()=>{
         const gridElements=document.querySelectorAll('.gridElement');
         gridElements.forEach((gridElement)=> drawingArea.removeChild(gridElement));
-        const size=prompt("Write a numeric value. Max:100");
-        createGrid(size);
-        colorGrid();
+        const size=prompt("Write the number of squares per side. Max:100");
+        if (size<=100){
+            createGrid(size);
+            colorGrid();}
+            else alert("The value you entered is not valid");
 })}
 
 
