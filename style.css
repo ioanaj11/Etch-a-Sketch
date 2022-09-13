@@ -69,6 +69,7 @@ body{
     width: 1200px;
     height: 800px;
     margin-top: 25px;
+    margin-bottom: 25px;
     border:6px double;
     border-color: rgb(43, 70, 105);
     border-radius: 60px;
@@ -118,7 +119,7 @@ button{
     margin-top: 20px;
     margin-left:30px;
     margin-right: 20px;
-    font-size: 40px;
+    font-size: 35px;
     font-family: cursive;
     font-style: bold;
     border-radius: 10px;
