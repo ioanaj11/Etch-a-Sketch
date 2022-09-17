@@ -1,7 +1,7 @@
 const drawingArea=document.querySelector('.drawingArea');
 
-//generates the grid of the drawing area with an intial size of 16X16 and then based on the user input
-function createGrid(size=16){
+//generates the grid of the drawing area with an intial size of 50X50 and then based on the user input
+function createGrid(size=50){
     drawingArea.style.gridTemplateColumns=`repeat( ${size}, ${size}fr)`;
     drawingArea.style.gridTemplateRows=`repeat(${size}, ${size}fr)`;
     for(let i=1; i<=size; i++){
@@ -13,19 +13,25 @@ function createGrid(size=16){
 
 createGrid();
 
-//generates a new grid if the user selects the "Grid size" button, according to the number the user entered
+//updates the grid-size according to the dimension chosen by the user
+const gridSize = document.querySelector("#gridsize");
+const output = document.querySelector(".gridsize-output");
+
+output.textContent = `${gridSize.value} x ${gridSize.value}`;
+
+gridSize.addEventListener("input", () => {
+    reloadGrid();
+    createGrid(gridSize.value);
+    output.textContent=`${gridSize.value} x ${gridSize.value}`;
+});
+
+//generates a new grid if the user selects a different value vor the "Grid size" slider
 function reloadGrid(){
     const gridElements=document.querySelectorAll('.gridElement');
     gridElements.forEach((gridElement)=> drawingArea.removeChild(gridElement));
-    const size=prompt("Write the number of squares per side. Max:100");
-    if (size<=100)createGrid(size);
-       else alert("The value you entered is not valid");
     colorPreviewRainbow.style.borderColor="black";
     colorPreviewBlack.style.borderColor="black";
 }
-
-const gridSizeBtn=document.querySelector('#gridSizeBtn');
-gridSizeBtn.addEventListener('click', ()=> reloadGrid());
 
 //colors the grid elements black when the mouse goes over them, if the user selects the "Pen" or "color preview black" button
 function colorGrid(){

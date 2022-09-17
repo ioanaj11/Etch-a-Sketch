@@ -14,14 +14,28 @@
 <body>
     <div class="container">
         <h1>Etch-a-Sketch</h1>
+        
         <div class="controlPanel">
             <div>
-                <button id="gridSizeBtn">Grid size</button>
                 <button id="penBtn">Pen</button>
                 <div class="colorPreview">
                     <button class="colorPreviewBlack"></button>
                     <button class="colorPreviewRainbow"></button>
                 </div>
+            </div>
+            <div class="gridsize-slider">
+                <label for="gridsize">Grid size:</label>
+                <input
+                    type="range"
+                    name="gridsize"
+                    id="gridsize"
+                    min="10"
+                    max="90"
+                    step="10"
+                    value="50"
+                    >
+                    <br>
+                <output class="gridsize-output" for="gridsize"></output>
             </div>
             
             <div class="board">

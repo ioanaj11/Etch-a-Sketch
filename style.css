@@ -88,7 +88,7 @@ h1 {
     font-size: 100px;
     font-family: 'Shadows Into Light', cursive;
     margin-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     }
 
 .board {
@@ -175,6 +175,14 @@ button:hover{
     grid-area: 3/3/4/4;
 }
 
+.gridsize-slider{
+    grid-area: 2/1/3/2;
+
+}
+
+#penBtn{
+    margin-bottom: 16px;
+}
 .center{
     background-color: rgb(214, 205, 188);
     width: 20px;
@@ -183,4 +191,43 @@ button:hover{
     border: 4px double;
     border-color: rgb(214, 205, 188);
     
+}
+
+label{
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left:60px;
+    margin-right: 20px;
+    color: rgb(238, 222, 233);
+     }
+
+.gridsize-output{
+    font-size: 20px;
+    position:relative;
+    margin-left:100px;
+    font-weight: 700;
+    color: rgb(238, 222, 233);
+}
+
+input[type=range]{
+    -webkit-appearance: none;
+    margin-left: 60px;
+    margin-bottom: 10px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    height: 5px;
+    background: #ddd;
+    border: none;
+    }
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: rgb(43, 42, 42);
+    margin-top: -4px;
 }
