@@ -205,14 +205,14 @@ label{
 .gridsize-output{
     font-size: 20px;
     position:relative;
-    margin-left:100px;
+    margin-left:92px;
     font-weight: 700;
     color: rgb(238, 222, 233);
 }
 
 input[type=range]{
     -webkit-appearance: none;
-    margin-left: 60px;
+    margin-left: 57px;
     margin-bottom: 10px;
 }
 
